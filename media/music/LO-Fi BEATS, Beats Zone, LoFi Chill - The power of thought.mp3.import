@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/LO-Fi BEATS, Beats Zone, LoFi Chill - The power of thought.mp3-f071f630fefd5d1e60da8d4304dea394.mp3str"
+
+[deps]
+
+source_file="res://media/music/LO-Fi BEATS, Beats Zone, LoFi Chill - The power of thought.mp3"
+dest_files=[ "res://.import/LO-Fi BEATS, Beats Zone, LoFi Chill - The power of thought.mp3-f071f630fefd5d1e60da8d4304dea394.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

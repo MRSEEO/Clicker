@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://media/fonts/text.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://media/effects/click.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "spawn"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("number:rect_position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.37, -4.2453, -50, -0.25, 0, 0.16, -45.8293 ),
+"times": PoolRealArray( 0, 0.3, 1 )
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("number:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="click" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="number" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 33.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "+1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="anim" type="AnimationPlayer" parent="."]
+autoplay = "spawn"
+anims/spawn = SubResource( 2 )

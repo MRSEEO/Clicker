@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/LO-Fi BEATS, Beats Zone, LoFi Chill - everything calm.mp3-5b71cbc3120264f436a4be759f7a7dfb.mp3str"
+
+[deps]
+
+source_file="res://media/music/LO-Fi BEATS, Beats Zone, LoFi Chill - everything calm.mp3"
+dest_files=[ "res://.import/LO-Fi BEATS, Beats Zone, LoFi Chill - everything calm.mp3-5b71cbc3120264f436a4be759f7a7dfb.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

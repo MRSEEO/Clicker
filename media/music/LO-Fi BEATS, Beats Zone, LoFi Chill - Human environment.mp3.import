@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/LO-Fi BEATS, Beats Zone, LoFi Chill - Human environment.mp3-6d7bb879704b4d142ce11e2dbcceb53a.mp3str"
+
+[deps]
+
+source_file="res://media/music/LO-Fi BEATS, Beats Zone, LoFi Chill - Human environment.mp3"
+dest_files=[ "res://.import/LO-Fi BEATS, Beats Zone, LoFi Chill - Human environment.mp3-6d7bb879704b4d142ce11e2dbcceb53a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

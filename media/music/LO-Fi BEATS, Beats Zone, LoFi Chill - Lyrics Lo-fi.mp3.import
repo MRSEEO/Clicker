@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/LO-Fi BEATS, Beats Zone, LoFi Chill - Lyrics Lo-fi.mp3-104b1aabe1d86b0a22d5bda268b36e42.mp3str"
+
+[deps]
+
+source_file="res://media/music/LO-Fi BEATS, Beats Zone, LoFi Chill - Lyrics Lo-fi.mp3"
+dest_files=[ "res://.import/LO-Fi BEATS, Beats Zone, LoFi Chill - Lyrics Lo-fi.mp3-104b1aabe1d86b0a22d5bda268b36e42.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,54 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Button",
+"class": "upgrade",
+"language": "GDScript",
+"path": "res://objects/upgrade.gd"
+}, {
+"base": "Button",
+"class": "upgrade_clicks",
+"language": "GDScript",
+"path": "res://objects/upgrade_clicks.gd"
+} ]
+_global_script_class_icons={
+"upgrade": "",
+"upgrade_clicks": ""
+}
+
+[application]
+
+config/name="Clicker"
+run/main_scene="res://scenes/main.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Audio="*res://Systems/Audio.tscn"
+Global="*res://global.gd"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/size/test_width=1280
+window/size/test_height=720
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+quality/filters/msaa=1
+environment/default_environment="res://default_env.tres"

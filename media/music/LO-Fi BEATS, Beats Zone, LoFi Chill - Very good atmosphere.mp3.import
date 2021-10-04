@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/LO-Fi BEATS, Beats Zone, LoFi Chill - Very good atmosphere.mp3-c78ce93796ef5c93f05fafb69a898693.mp3str"
+
+[deps]
+
+source_file="res://media/music/LO-Fi BEATS, Beats Zone, LoFi Chill - Very good atmosphere.mp3"
+dest_files=[ "res://.import/LO-Fi BEATS, Beats Zone, LoFi Chill - Very good atmosphere.mp3-c78ce93796ef5c93f05fafb69a898693.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

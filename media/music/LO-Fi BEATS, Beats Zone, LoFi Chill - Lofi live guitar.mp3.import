@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/LO-Fi BEATS, Beats Zone, LoFi Chill - Lofi live guitar.mp3-180fb68e3a89f4fd7189b652eff5d292.mp3str"
+
+[deps]
+
+source_file="res://media/music/LO-Fi BEATS, Beats Zone, LoFi Chill - Lofi live guitar.mp3"
+dest_files=[ "res://.import/LO-Fi BEATS, Beats Zone, LoFi Chill - Lofi live guitar.mp3-180fb68e3a89f4fd7189b652eff5d292.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

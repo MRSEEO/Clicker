@@ -1,0 +1,125 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://scenes/main.gd" type="Script" id=1]
+[ext_resource path="res://objects/room.tscn" type="PackedScene" id=2]
+[ext_resource path="res://media/fonts/text.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://objects/update.tscn" type="PackedScene" id=4]
+[ext_resource path="res://objects/update_clicks.tscn" type="PackedScene" id=5]
+
+[sub_resource type="Environment" id=1]
+glow_enabled = true
+glow_intensity = 8.0
+glow_bloom = 0.51
+
+[sub_resource type="DynamicFont" id=2]
+size = 42
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 42
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.815763, 0.568504, 0.825363 )
+
+[node name="main" type="Spatial"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -1, -3.19744e-14, -8.74228e-08, -2.26267e-08, 0.965926, 0.258819, 8.44439e-08, 0.258819, -0.965926, -4.37887, 2.59906, -4.84993 )
+keep_aspect = 0
+environment = SubResource( 1 )
+current = true
+
+[node name="UI" type="CanvasLayer" parent="Camera"]
+
+[node name="Label" type="Label" parent="Camera/UI"]
+margin_right = 135.0
+margin_bottom = 43.0
+custom_fonts/font = SubResource( 2 )
+text = "Click!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="autoclicks" type="Label" parent="Camera/UI"]
+margin_top = 64.0
+margin_right = 135.0
+margin_bottom = 110.0
+custom_fonts/font = SubResource( 2 )
+text = "auto"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="playing_now" type="Label" parent="Camera/UI"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -46.0
+margin_right = 331.0
+custom_fonts/font = SubResource( 3 )
+text = "Playing Now: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="updates" type="VBoxContainer" parent="Camera/UI"]
+margin_left = 1536.0
+margin_top = 2.0
+margin_right = 1920.0
+margin_bottom = 1078.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="1_battery" parent="Camera/UI/updates" instance=ExtResource( 4 )]
+
+[node name="update_clicks" parent="Camera/UI/updates" instance=ExtResource( 5 )]
+margin_top = 65.0
+margin_bottom = 126.0
+
+[node name="room" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.10705, 0.0994, -3.83435 )
+
+[node name="Area" type="Area" parent="room"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.67153, 1.44962, 2.62059 )
+input_capture_on_drag = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="room/Area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.178902, -0.091182, 0.167994 )
+shape = SubResource( 4 )
+
+[node name="SpotLight" type="SpotLight" parent="room"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33825, 1.6466, 2.5058 )
+light_color = Color( 0.631714, 0.694142, 0.808594, 1 )
+light_energy = 16.0
+spot_range = 0.840032
+spot_attenuation = 0.933032
+spot_angle = 67.199
+spot_angle_attenuation = 7.46426
+
+[node name="SpotLight2" type="SpotLight" parent="room"]
+transform = Transform( 0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 0.260768, 1.40581, 2.5058 )
+light_color = Color( 0.631714, 0.694142, 0.808594, 1 )
+light_energy = 16.0
+spot_range = 0.840032
+spot_attenuation = 1.36604
+spot_angle = 67.199
+spot_angle_attenuation = 0.812253
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.74686, 2.45331, -4.77191 )
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="input_event" from="room/Area" to="." method="_on_Area_input_event"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
